@@ -216,7 +216,7 @@
       if (cur.className != null) className = cur.className + " " + className;
       elt.className = className;
       if (cur.render) cur.render(elt, data, cur);
-      else elt.appendChild(document.createTextNode(cur.displayText || getText(cur)));
+      else elt.innerHTML = cur.displayText;
       elt.hintId = i;
     }
 
